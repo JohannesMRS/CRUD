@@ -1,0 +1,40 @@
+
+                <!-- Modal edit nih cees -->
+                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">
+                  edit
+        </button>
+            <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header mt-3" >
+              <h4 class="modal-title">Edit Mahasiswa</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+          <div class = "container mt-3">
+          <form action = "tambah.php" method="post">
+            <div class="mb-3">
+              <label for="nim" class="form-label">Nim</label>
+              <input type="text" class="form-control" id="nim" name = "nim" required>
+            </div>
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="nama" name = "nama">
+          </div>
+          <div class="mb-3">
+            <label for="jk" class="form-label">Jenis kelamin</label>
+            <input type="text" class="form-control" id="jk" name = "jk">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+      <!-- Akhir dari modal edit nih cees -->
