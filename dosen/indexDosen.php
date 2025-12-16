@@ -87,7 +87,7 @@
 				<td><?php echo $row['jk']; ?></td>
 				
                 <td>
-                  <a href="edit.php?id=<?php echo $row['id']; ?>"><button type="button" class="btn btn-warning" data-bs-target="edit.php">-Edit-</button></a>
+                  <a href="edit.php?id=<?php echo $row['id']; ?>"><button type="button" class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin mengedit data ini?')">-Edit-</button></a>
                   <a href="hapus.php?id=<?php echo $row['id'];?>"><button type="button" class="btn btn-danger">-Hapus-</button></a>
                 </td>
 			</tr>

@@ -86,8 +86,11 @@
 				<td><?php echo $row['jk']; ?></td>
 				
                 <td>
-                  <a href="edit.php?id=<?php echo $row['id']; ?>"><button type="button" class="btn btn-warning" data-bs-target="edit.php">-Edit-</button></a>
-                  <a href="hapus.php?id=<?php echo $row['id'];?>"><button type="button" class="btn btn-danger">-Hapus-</button></a>
+<div class="container mt-3">
+
+<a href="edit.php?id=<?php echo $row['id'];?>"><button  type="button" class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin mengedit data ini?')">-Edit-</button></a>
+ <a href="hapus.php?id=<?php echo $row['id'];?>"><button type="button" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">-Hapus-</button></a>
+</div>
                 </td>
 			</tr>
 			<?php 
@@ -102,5 +105,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 </html>
