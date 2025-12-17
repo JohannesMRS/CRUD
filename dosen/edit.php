@@ -32,11 +32,23 @@
     <input type="text" class="form-control" id="nama" placeholder="Masukkan nama" name="nama" value = "<?php echo $row['nama']; ?>">
   </div>
   <div class="mb-3">
-    <label for="jk" class="form-label">Jenis Kelamin</label>
-    <input type="text" class="form-control" id="jk" placeholder="Masukkan nama" name="jk" value = "<?php echo $row['jk']; ?>">
+      <label for="jk" class="form-label">Jenis kelamin</label>
+      <select class="form-select" aria-label="Default select example" id="jk" name="jk" >
+        <option selected>Pilih Jenis Kelamin</option>
+        <option value="L">L</option>
+        <option value="P">P</option>
+      </select>
+    </div>
+  <div class="mb-3">
+    <label for="Alamat" class="form-label">Alamat</label>
+    <input type="text" class="form-control" id="Alamat" placeholder="Masukkan Alamat" name="Alamat" value = "<?php echo $row['Alamat']; ?>">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-  <a href="index.php"><button type="submit" class="btn btn-primary">Kembali</button></a>
+  <div class="mb-3">
+    <label for="email" class="form-label">Jenis Kelamin</label>
+    <input type="text" class="form-control" id="email" placeholder="example@gmail.com" name="email" value = "<?php echo $row['email']; ?>">
+  </div>
+  <button type="submit" class="btn btn-success">Simpan Perubahan</button>
+  <a href="index.php"><button type="submit" class="btn btn-danger">Kembali</button></a>
   <input type="hidden" name = 'id' value = "<?php echo$row['id']; ?>" >
 </form>
         </div>

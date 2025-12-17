@@ -45,7 +45,11 @@
     </div>
     <div class="mb-3">
         <label for="jk" class="form-label">Jenis kelamin</label>
-        <input type="text" class="form-control" id="jk" name = "jk" required placeholder="Pilih antara L/P">
+        <select class="form-select" aria-label="Default select example" id="jk" name="jk" >
+          <option selected>Pilih Jenis Kelamin</option>
+          <option value="L">L</option>
+          <option value="P">P</option>
+        </select>
     </div>
   
     

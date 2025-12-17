@@ -19,7 +19,7 @@
   <h3>Data Dosen</h3>
   
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-    Tambah
+    Tambah Data Dosen
   </button>
  <a href="../index.php"> <button type="button" class="btn btn-secondary">
     Kembali
@@ -45,16 +45,26 @@
         <input type="text" class="form-control" id="nama" name = "nama" required placeholder="Masukkan Nama">
     </div>
     <div class="mb-3">
-        <label for="jk" class="form-label">Jenis kelamin</label>
-        <input type="text" class="form-control" id="jk" name = "jk" required placeholder="Pilih antara L/P">
+      <label for="jk" class="form-label">Jenis kelamin</label>
+      <select class="form-select" aria-label="Default select example" id="jk" name="jk" >
+        <option selected>Pilih Jenis Kelamin</option>
+        <option value="L">L</option>
+        <option value="P">P</option>
+      </select>
     </div>
-  
-    
+    <div class="mb-3">
+        <label for="Alamat" class="form-label">Alamat</label>
+        <input type="text" class="form-control" id="Alamat" name = "Alamat" required placeholder="Masukkan Nama">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="text" class="form-control" id="email" name = "email" required placeholder="example@gmail.com">
+    </div>
   </div>
   <!-- Modal footer -->
   <div class="modal-footer">
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Simpan</button>
+    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
   </div>
 </form>
 
@@ -70,6 +80,8 @@
         <th>Nip</th>
         <th>Nama</th>
         <th>Jenis Kelamin</th>
+        <th>Alamat</th>
+        <th>E-mail</th>
       </tr>
     </thead>
     <tbody>
@@ -85,10 +97,12 @@
 				<td><?php echo $row['nip']; ?></td>
 				<td><?php echo $row['nama']; ?></td>
 				<td><?php echo $row['jk']; ?></td>
+				<td><?php echo $row['Alamat']; ?></td>
+				<td><?php echo $row['email']; ?></td>
 				
                 <td>
                   <a href="edit.php?id=<?php echo $row['id']; ?>"><button type="button" class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin mengedit data ini?')">-Edit-</button></a>
-                  <a href="hapus.php?id=<?php echo $row['id'];?>"><button type="button" class="btn btn-danger">-Hapus-</button></a>
+                  <a href="hapus.php?id=<?php echo $row['id'];?>"><button type="button" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">-Hapus-</button></a>
                 </td>
 			</tr>
 			<?php 

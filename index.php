@@ -7,14 +7,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Polmed</title>
     <style>
         h1{
             margin-top: 200px;
         }
         body{
             height: 775px;
-            background-image: radial-gradient(circle at top left, #fafafaff, #a4a4a4ff);
+            background-image: radial-gradient(circle at top left, #fafafaff, #00a2ffff);
         }
     </style>
 <body>
