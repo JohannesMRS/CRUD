@@ -7,7 +7,7 @@
     <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Dosen</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -101,10 +101,59 @@
 				<td><?php echo $row['email']; ?></td>
 				
                 <td>
-                  <a href="edit.php?id=<?php echo $row['id']; ?>"><button type="button" class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin mengedit data ini?')">-Edit-</button></a>
+                  <button type="button" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#modalEdit<?php echo $no?>">-Edit-</button>
                   <a href="hapus.php?id=<?php echo $row['id'];?>"><button type="button" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">-Hapus-</button></a>
                 </td>
 			</tr>
+      <!-- Modal EDit AWal -->
+<div class="modal" id="modalEdit<?php echo $no?>">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header mt-3" >
+        <h4 class="modal-title">Edit Data Mahasiswa</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+    <div class = "container mt-3">
+    <form action = "editAksi.php" method="post">
+    <div class="mb-3">
+        <label for="nip" class="form-label">NIP</label>
+        <input type="text" class="form-control" id="nip" name = "nip" value="<?php echo $row['nip']?>" placeholder="Masukkan NIP">
+    </div>
+    <div class="mb-3">
+        <label for="nama" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="nama" name = "nama" value="<?php echo $row['nama']?>" required placeholder="Masukkan Nama Anda">
+    </div>
+    <input type="hidden"id="nama" name = "id" value="<?php echo $row['id']?>" >
+    <div class="mb-3">
+      <label for="jk" class="form-label">Jenis kelamin</label>
+      <select class="form-select" aria-label="Default select example" id="jk" name="jk" >
+        <option value="<?php echo $row['jk']?>" selected>value="<?php echo $row['jk']?>"</option>
+        <option value="L">L</option>
+        <option value="P">P</option>
+      </select>
+    </div>
+    <div class="mb-3">
+        <label for="Alamat" class="form-label">Alamat</label>
+        <input type="text" class="form-control" id="Alamat" name = "Alamat" value="<?php echo $row['Alamat']?>" required placeholder="Masukkan Alamat Anda">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="email" name = "email" value="<?php echo $row['email']?>" required placeholder="example@gmail.com">
+    </div>
+  
+    
+  </div>
+  <!-- Modal footer -->
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-success" name="edit">Edit Data</button>
+    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+  </div>
+</form>
+
+    </div>
+  </div>
+</div>
+<!-- Modal EDit Akhir -->
 			<?php 
 		}
 		?>

@@ -18,7 +18,7 @@
   <h3>Data Mahasiswa</h3>
   
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-    Tambah
+    Tambah Data Mahasiswa
   </button>
  <a href="../index.php"> <button type="button" class="btn btn-secondary">
     Kembali
@@ -56,8 +56,8 @@
   </div>
   <!-- Modal footer -->
   <div class="modal-footer">
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-success">Tambah</button>
+    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
   </div>
 </form>
 
@@ -92,11 +92,52 @@
                 <td>
 <div class="container mt-3">
 
-<a href="edit.php?id=<?php echo $row['id'];?>"><button  type="button" class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin mengedit data ini?')">-Edit-</button></a>
+<button  type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEdit<?php echo $no?>">-Edit-</button>
  <a href="hapus.php?id=<?php echo $row['id'];?>"><button type="button" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">-Hapus-</button></a>
 </div>
                 </td>
 			</tr>
+<!-- Modal EDit AWal -->
+<div class="modal" id="modalEdit<?php echo $no?>">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header mt-3" >
+        <h4 class="modal-title">Edit Data Mahasiswa</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+    <div class = "container mt-3">
+    <form action = "editAksi.php" method="post">
+    <div class="mb-3">
+        <label for="nim" class="form-label">Nim</label>
+        <input type="text" class="form-control" id="nim" name = "nim" value="<?php echo $row['nim']?>" placeholder="Masukkan NIM">
+    </div>
+    <div class="mb-3">
+        <label for="nama" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="nama" name = "nama" value="<?php echo $row['nama']?>" required placeholder="Masukkan Nama Anda">
+    </div>
+    <input type="hidden"id="nama" name = "id" value="<?php echo $row['id']?>" >
+    <div class="mb-3">
+      <label for="jk" class="form-label">Jenis kelamin</label>
+      <select class="form-select" aria-label="Default select example" id="jk" name="jk" >
+        <option value="<?php echo $row['jk']?>" selected>value="<?php echo $row['jk']?>"</option>
+        <option value="L">L</option>
+        <option value="P">P</option>
+      </select>
+    </div>
+  
+    
+  </div>
+  <!-- Modal footer -->
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-success" name="edit">Edit Data</button>
+    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+  </div>
+</form>
+
+    </div>
+  </div>
+</div>
+<!-- Modal EDit Akhir -->
 			<?php 
 		}
 		?>

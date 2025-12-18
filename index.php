@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polmed</title>
+    <title>Home</title>
     <style>
         h1{
             margin-top: 200px;
@@ -32,7 +32,7 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Data Mahasiswa</h5>
-        <p class="card-text">Halaman ini berisi seputaran mengenai mdata pribadi mahasiswa</p>
+        <p class="card-text">Halaman ini berisi seputaran mengenai data pribadi mahasiswa</p>
         <a href="mahasiswa/index.php" class="btn btn-primary">Klik Disini</a>
       </div>
     </div>
@@ -41,7 +41,7 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Data Dosen</h5>
-        <p class="card-text">Halaman ini berisi seputaran mengenai mdata pribadi dosen</p>
+        <p class="card-text">Halaman ini berisi seputaran mengenai ata pribadi dosen</p>
         <a href="dosen/indexDosen.php" class="btn btn-primary">Klik Disini</a>
       </div>
     </div>
